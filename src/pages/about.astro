@@ -1,0 +1,18 @@
+---
+import AboutSection from "@components/sections/AboutSection.astro";
+import TechStackSection from "@components/sections/TechStackSection.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+
+const title = "About | Johann Bierman";
+const ogMetadata = {
+  url: "https://johannbierman.github.io/about",
+  title: "About Johann Bierman - Software Developer",
+};
+---
+
+<PageLayout title={title} ogMetadata={ogMetadata} page="/about">
+  <div class="space-y-16 sm:space-y-20">
+    <AboutSection />
+    <TechStackSection />
+  </div>
+</PageLayout>

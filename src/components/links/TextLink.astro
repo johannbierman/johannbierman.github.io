@@ -1,0 +1,15 @@
+---
+interface LinkProps {
+  href: string;
+}
+const { href } = Astro.props as LinkProps;
+---
+
+<div>
+  <a
+    href={href}
+    class="bg-softWhite text-lg px-2 py-1 rounded-lg hover:underline hover:text-charcoal"
+  >
+    <slot />
+  </a>
+</div>

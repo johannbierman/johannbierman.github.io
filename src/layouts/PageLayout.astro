@@ -1,0 +1,23 @@
+---
+import Navbar from "@components/Navbar.astro";
+import RootLayout from "./RootLayout.astro";
+
+interface PageLayoutProps {
+  title: string;
+  ogMetadata: {
+    url: string;
+    title: string;
+  };
+  page: "/work" | "/about" | "/contact";
+}
+const { title, ogMetadata, page } = Astro.props as PageLayoutProps;
+---
+
+<RootLayout title={title} ogMetadata={ogMetadata}>
+  <div class="flex flex-row min-h-screen">
+    <Navbar page={page} />
+    <main class="flex grow m-8 sm:m-20">
+      <slot />
+    </main>
+  </div>
+</RootLayout>

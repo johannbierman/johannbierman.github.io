@@ -1,0 +1,14 @@
+---
+import WorkSection from "@components/sections/WorkSection.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+
+const title = "Work | Johann Bierman";
+const ogMetadata = {
+  url: "https://johannbierman.github.io/work",
+  title: "Work of Johann Bierman - Software Developer",
+};
+---
+
+<PageLayout title={title} ogMetadata={ogMetadata} page="/work">
+  <WorkSection />
+</PageLayout>

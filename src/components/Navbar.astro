@@ -1,0 +1,36 @@
+---
+import GitHubLogoLink from "./links/GitHubLogoLink.astro";
+import NavbarTextLink from "./links/NavbarTextLink.astro";
+
+interface NavBarProps {
+  page: "/work" | "/about" | "/contact";
+}
+const { page } = Astro.props as NavBarProps;
+---
+
+<nav class="flex">
+  <div
+    class="flex flex-col w-10 sm:w-14 items-center justify-between border-r border-charcoal"
+  >
+    <ul class="text-lg mt-8">
+      <li class="flex justify-center">
+        <GitHubLogoLink className="size-5" />
+      </li>
+      <li class="mt-16">
+        <NavbarTextLink href="/contact" text="Contact" page={page} />
+      </li>
+      <li class="mt-20">
+        <NavbarTextLink href="/about" text="About" page={page} />
+      </li>
+      <li class="mt-20">
+        <NavbarTextLink href="/work" text="Work" page={page} />
+      </li>
+    </ul>
+    <a
+      href="/"
+      class="block text-base font-bold hover:text-charcoal fixed sm:relative left-2 sm:left-0 bottom-4 sm:bottom-0 sm:mb-4"
+    >
+      JB
+    </a>
+  </div>
+</nav>

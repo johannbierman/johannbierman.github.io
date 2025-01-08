@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import GitHubLogo from "@assets/github.svg";
+
+interface GitHubLinkProps {
+  className: string;
+}
+const { className } = Astro.props as GitHubLinkProps;
+---
+
+<div>
+  <a
+    href="https://github.com/johannbierman"
+    target="_blank"
+    aria-label="Visit Johann Bierman's GitHub profile"
+    rel="noopener noreferrer"
+  >
+    <div class="p-2 rounded-lg bg-softWhite">
+      <Image
+        src={GitHubLogo}
+        alt="GitHub logo linking to Johann Bierman's GitHub profile"
+        loading="eager"
+        class={className}
+      />
+    </div>
+  </a>
+</div>

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const charactersLength = 125;
   const characters = Array.from({ length: charactersLength }, (_, i) =>
-    String.fromCharCode(i + 1)
+    String.fromCharCode(i + 1),
   );
 
   function initializeCanvas() {

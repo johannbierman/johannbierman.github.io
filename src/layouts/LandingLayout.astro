@@ -1,0 +1,22 @@
+---
+import RootLayout from "./RootLayout.astro";
+
+interface LandingLayoutProps {
+  title: string;
+  ogMetadata: {
+    url: string;
+    title: string;
+  };
+}
+const { title, ogMetadata } = Astro.props as LandingLayoutProps;
+---
+
+<RootLayout title={title} ogMetadata={ogMetadata}>
+  <div class="overflow-hidden relative">
+    <canvas id="canvas" class="absolute inset-0 z-0"></canvas>
+    <main class="h-screen flex flex-col justify-center relative z-10">
+      <slot />
+    </main>
+  </div>
+  <script src="../scripts/digitalRain.ts"></script>
+</RootLayout>

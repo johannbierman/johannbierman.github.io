@@ -1,0 +1,17 @@
+---
+interface LinkNavBarProps {
+  href: string;
+  text: string;
+  page: string;
+}
+const { href, text, page } = Astro.props as LinkNavBarProps;
+---
+
+<div>
+  <a
+    href={href}
+    class={`block transform -rotate-90 antialiased ${page !== href ? "hover:text-charcoal hover:underline" : "text-charcoal/50"}`}
+  >
+    {text}
+  </a>
+</div>

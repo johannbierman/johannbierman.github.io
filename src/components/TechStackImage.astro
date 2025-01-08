@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+
+interface StackImageProps {
+  image: ImageMetadata;
+  alt: string;
+}
+
+const { image, alt } = Astro.props as StackImageProps;
+---
+
+<li>
+  <Image src={image} alt={alt} loading={"eager"} class="h-8 w-8" />
+</li>

@@ -1,0 +1,48 @@
+---
+interface RootLayoutProps {
+  title: string;
+  ogMetadata: {
+    url: string;
+    title: string;
+  };
+}
+const { title, ogMetadata } = Astro.props as RootLayoutProps;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Johann Bierman's software developer portfolio website"
+    />
+    <meta
+      name="keywords"
+      content="Johann Bierman, software developer, engineer, portfolio, Guernsey, South Africa"
+    />
+    <meta property="og:url" content={ogMetadata.url} />
+    <meta property="og:site_name" content="Johann Bierman" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content={ogMetadata.title} />
+    <meta
+      property="og:description"
+      content="Full stack developer based in Guernsey. Explore his portfolio and connect for your next project."
+    />
+    <meta
+      property="og:image"
+      content="https://johannbierman.github.io/johannbierman.png"
+    />
+  </head>
+  <body class="bg-softWhite font-roboto">
+    <slot />
+  </body>
+</html>

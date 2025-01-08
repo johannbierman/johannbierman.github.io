@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+
+interface WorkCardProps {
+  image: ImageMetadata;
+  alt: string;
+  link: string;
+  name: string;
+  back: {
+    title: string;
+    date: string;
+    description: string;
+  };
+}
+const { image, alt, link, name, back } = Astro.props as WorkCardProps;
+---
+
+<li class="flex flex-col">
+  <div class="flex aspect-[3/2] w-full overflow-hidden shadow">
+    <div class="group relative w-full h-full">
+      <Image
+        src={image}
+        alt={alt}
+        loading="eager"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        class="hidden sm:block absolute inset-0 p-8 w-full h-full bg-white translate-x-full transition-transform duration-1000 group-hover:translate-x-0"
+      >
+        <strong class="text-lg">{back.title}</strong>
+        <p>{back.date}</p>
+        <p class="mt-4">{back.description}</p>
+      </div>
+    </div>
+  </div>
+  <a
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-base sm:text-lg mt-2 hover:underline hover:text-charcoal"
+    >{name}</a
+  >
+</li>

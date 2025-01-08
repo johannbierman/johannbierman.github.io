@@ -1,0 +1,112 @@
+---
+import EnergyCon from "@assets/work/energycon.png";
+import HEFMA from "@assets/work/hefma.png";
+import MzansiCard from "@assets/work/mzansicard.png";
+import RAWCapitalPartners from "@assets/work/rawcapitalpartners.png";
+import SAUPEC from "@assets/work/saupec.png";
+import Stellenbosch from "@assets/work/stellenbosch.png";
+import TRNGlobal from "@assets/work/trnglobal.png";
+import ViewMenu from "@assets/work/viewmenu.png";
+import WorkCard from "@components/WorkCard.astro";
+---
+
+<section class="flex flex-col grow space-y-6 sm:space-y-10 text-base">
+  <h1 class="text-3xl font-bold text-charcoal">Work</h1>
+  <ul class="grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-16">
+    <WorkCard
+      image={RAWCapitalPartners}
+      alt="Full Stack Developer at RAW Capital Partners"
+      link="https://rawcapitalpartners.com"
+      name="rawcapitalpartners.com"
+      back={{
+        title: "Full Stack Developer",
+        date: "Apr 2021 - Present",
+        description:
+          "RAW Capital Partners specializes in secure, low-risk mortgage investments and flexible lending solutions.",
+      }}
+    />
+    <WorkCard
+      image={TRNGlobal}
+      alt="Chief Technology Officer at TRN Global"
+      link="https://trnglobal.com"
+      name="trnglobal.com"
+      back={{
+        title: "Chief Technology Officer",
+        date: "Sep 2021 - Feb 2023",
+        description: "TRN Global startup is developing a one-stop travel app.",
+      }}
+    />
+    <WorkCard
+      image={Stellenbosch}
+      alt="Utilities Manager at Stellenbosch University"
+      link="https://facilitiesmanagement.sun.ac.za"
+      name="sun.ac.za"
+      back={{
+        title: "Utilities Manager",
+        date: "Dec 2021 - Jan 2023",
+        description:
+          "Property Services department of Stellenbosch University's Facilities Management division.",
+      }}
+    />
+    <WorkCard
+      image={MzansiCard}
+      alt="Chief Technology Officer at Mzansi Card"
+      link="https://mzansicard.co.za"
+      name="mzansicard.co.za"
+      back={{
+        title: "Chief Technology Officer",
+        date: "Jan 2021 - Apr 2022",
+        description:
+          "Mzansi Card startup was sold as a contactless business card solution for the modern entrepreneur.",
+      }}
+    />
+    <WorkCard
+      image={ViewMenu}
+      alt="Chief Technology Officer at View Menu"
+      link="https://viewmenu.co.za"
+      name="viewmenu.co.za"
+      back={{
+        title: "Chief Technology Officer",
+        date: "Sep 2020 - Feb 2022",
+        description:
+          "View Menu startup was an eco-friendly digital menu solution.",
+      }}
+    />
+    <WorkCard
+      image={SAUPEC}
+      alt="Author of paper Review of Control Strategies for Lithium-ion Battery Energy Storage Systems in Distribution Networks"
+      link="https://ieeexplore.ieee.org/document/9041066"
+      name="ieee.org"
+      back={{
+        title: "Academic Publication",
+        date: "2020 International SAUPEC/RobMech/PRASA Conference",
+        description:
+          "Research article: Review of Control Strategies for Lithium-ion Battery Energy Storage Systems in Distribution Networks.",
+      }}
+    />
+    <WorkCard
+      image={EnergyCon}
+      alt="Author of paper Demand Forecasting Models for Academic Campus Buildings"
+      link="https://ieeexplore.ieee.org/document/9236583"
+      name="ieee.org"
+      back={{
+        title: "Academic Publication",
+        date: "2020 6th IEEE International Energy Conference (ENERGYCon)",
+        description:
+          "Research article: Demand Forecasting Models for Academic Campus Buildings.",
+      }}
+    />
+    <WorkCard
+      image={HEFMA}
+      alt="Speaker at 2019 HEFMA Conference"
+      link="https://hefma.org/"
+      name="hefma.org"
+      back={{
+        title: "Professional Speaker",
+        date: "2019 HEFMA Conference",
+        description:
+          "Topic: Embracing the Fourth Industrial Revolution for Efficient Utility Management.",
+      }}
+    />
+  </ul>
+</section>

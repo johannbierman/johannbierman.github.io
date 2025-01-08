@@ -1,0 +1,39 @@
+---
+import Auth0Logo from "@assets/tech-stack/auth0.svg";
+import AzureLogo from "@assets/tech-stack/azure.svg";
+import DockerLogo from "@assets/tech-stack/docker.svg";
+import FirebaseLogo from "@assets/tech-stack/firebase.svg";
+import FlutterLogo from "@assets/tech-stack/flutter.svg";
+import GitLogo from "@assets/tech-stack/git.svg";
+import JestLogo from "@assets/tech-stack/jest.svg";
+import NextJSLogo from "@assets/tech-stack/nextjs.svg";
+import NodeJSLogo from "@assets/tech-stack/nodejs.svg";
+import OpenAILogo from "@assets/tech-stack/openai.svg";
+import PostgreSQLLogo from "@assets/tech-stack/postgresql.svg";
+import ReactLogo from "@assets/tech-stack/react.svg";
+import TailwindCSSLogo from "@assets/tech-stack/tailwindcss.svg";
+import TechStackImage from "@components/TechStackImage.astro";
+import TurboRepoLogo from "@assets/tech-stack/turborepo.svg";
+import TypeScriptLogo from "@assets/tech-stack/ts.svg";
+---
+
+<section>
+  <h1 class="text-3xl font-bold text-charcoal mb-8">Tech Stack</h1>
+  <ul class="grid grid-cols-5 gap-8 list-none">
+    <TechStackImage image={AzureLogo} alt="Microsoft Azure" />
+    <TechStackImage image={NextJSLogo} alt="Next.js" />
+    <TechStackImage image={ReactLogo} alt="React" />
+    <TechStackImage image={TypeScriptLogo} alt="TypeScript" />
+    <TechStackImage image={NodeJSLogo} alt="Node.js" />
+    <TechStackImage image={FirebaseLogo} alt="Firebase" />
+    <TechStackImage image={FlutterLogo} alt="Flutter" />
+    <TechStackImage image={GitLogo} alt="Git" />
+    <TechStackImage image={TurboRepoLogo} alt="Turborepo" />
+    <TechStackImage image={Auth0Logo} alt="Auth0" />
+    <TechStackImage image={OpenAILogo} alt="OpenAI" />
+    <TechStackImage image={DockerLogo} alt="Docker" />
+    <TechStackImage image={JestLogo} alt="Jest" />
+    <TechStackImage image={PostgreSQLLogo} alt="PostgreSQL" />
+    <TechStackImage image={TailwindCSSLogo} alt="Tailwind CSS" />
+  </ul>
+</section>
